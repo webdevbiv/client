@@ -14,7 +14,7 @@ const store = configureStore({
     [api.reducerPath]: api.reducer,
   },
   middleware: getDefault => {
-    getDefault().concat(api.middleware);
+    return getDefault().concat(api.middleware);
   },
 });
 setupListeners(store.dispatch);

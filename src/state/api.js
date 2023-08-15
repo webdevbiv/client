@@ -5,11 +5,11 @@ export const api = createApi({
   reducerPath: 'adminApi',
   tagTypes: ['User'],
   endpoints: build => ({
-    getUsers: build.query({
-      query: id => `general/users${id}`,
+    getUser: build.query({
+      query: id => `general/user/${id}`,
       providesTags: ['User'],
     }),
   }),
 });
 
-export const { useGetUsersQuery } = api;
+export const { useGetUserQuery } = api;
